@@ -32,7 +32,9 @@ export class OrderConfirmationClient extends BaseClient {
       });
   }
 
-  async renderInvoiceDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>> {
+  async renderOrderConfirmationDocumentFileId(
+    id: string,
+  ): Promise<Result<DocumentFileId, RequestError>> {
     return this.axios
       .get<DocumentFileId>(uri`/order-confirmations/${id}/document`)
       .then((result) => Ok(result.data))

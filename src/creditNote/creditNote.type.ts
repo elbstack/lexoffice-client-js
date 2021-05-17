@@ -19,7 +19,7 @@ export type CreditNote = Omit<
   Invoice,
   'dueDate' | 'XRechnung' | 'paymentConditions' | 'shippingConditions'
 > & {
-  voucherStatus: 'draft' | 'open' | 'paidoff' | 'voided';
+  voucherStatus: string;
   lineItem:
     | Omit<LineItem, 'discountPercentage'>
     | Omit<CustomLineItem, 'discountPercentage'>
@@ -27,7 +27,7 @@ export type CreditNote = Omit<
 };
 
 export type CreditNoteForCreate = {
-  language: 'de' | 'en';
+  language: string;
   archived: boolean;
   voucherDate: string;
   address: Address | AddressExistingLexofficeContact | AddressNonExistingLexofficeContact;

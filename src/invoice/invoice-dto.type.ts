@@ -8,11 +8,7 @@ import {
 } from './invoice.type';
 
 //  Create an Invoice
-export type InvoiceCreate = Required<
-  Partial<InvoiceForCreate>,
-  'voucherDate' | 'address' | 'lineItems' | 'totalPrice' | 'taxConditions' | 'shippingConditions'
->;
-
+export type InvoiceCreate = InvoiceForCreate;
 // // Create an XRechnung
 export type XRechnung = InvoiceCreate & {
   address: AddressExistingLexofficeContact;
@@ -22,7 +18,7 @@ export type XRechnung = InvoiceCreate & {
   };
   lineItems: (CustomLineItemXRechnung | TextLineItem)[];
   taxConditions: {
-    taxType: 'net';
+    taxType: string;
     taxTypeNote?: string;
   };
 };
@@ -38,4 +34,5 @@ export type InvoiceCreateResponse = {
 export type InvoiceRetrieveResponse = Partial<Invoice>;
 // Responce from rendering DocumentFileId
 export type DocumentFileId = Required<Partial<Invoice>, 'files'>;
+// export type DocumentFileId = {documentFileId:string;}
 ////////////////////////////////////////

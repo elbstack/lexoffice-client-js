@@ -6,9 +6,9 @@ export type Invoice = {
   createdDate: string;
   updatedDate: string;
   version: number;
-  language: 'de' | 'en';
+  language: string;
   archived: boolean;
-  voucherStatus: 'draft' | 'open' | 'paid' | 'voided';
+  voucherStatus: string;
   voucherNumber: string;
   voucherDate: string;
   dueDate: string | null;
@@ -44,7 +44,7 @@ export type Invoice = {
 };
 
 export type InvoiceForCreate = {
-  language: 'de' | 'en';
+  language?: string;
   archived?: boolean;
   voucherDate: string;
 
@@ -55,14 +55,14 @@ export type InvoiceForCreate = {
   } | null;
   lineItems: (CustomLineItem | TextLineItem)[];
   totalPrice: TotalPrice | TotalPriceInvoiceCreate;
-  taxAmounts: TaxAmount[];
+  taxAmounts?: TaxAmount[];
   taxConditions: {
     taxType: TaxType;
     taxTypeNote?: string;
   };
   paymentConditions?: PaymentConditions;
   shippingConditions: ShippingConditions | ShippingConditionsNone | ShippingConditionsPeriod;
-  recurringTemplateId: string | null;
+  recurringTemplateId?: string | null;
   title?: string;
   introduction?: string;
   remark?: string;
@@ -83,32 +83,29 @@ export type AddressNonExistingLexofficeContact = Required<Partial<Address>, 'nam
 
 // 2
 export type LineItem = {
-  id: string;
-  type: 'service' | 'material' | 'custom' | 'text';
+  id?: string;
+  type: string;
   name: string;
   description?: string;
   quantity: number;
   unitName: string;
   unitPrice: UnitPrice | UnitPriceGross;
-  discountPercentage: number;
+  discountPercentage?: number;
   lineItemAmount: number;
+  
 };
 
-export type CustomLineItem = Partial<Omit<LineItem, 'lineItemAmount' | 'id'>> & {
-  type: 'custom';
-};
-export type CustomLineItemXRechnung = CustomLineItem & {
-  type: 'custom' | 'service' | 'material';
-};
-export type TextLineItem = Omit<
-  LineItem,
-  'id' | 'quantity' | 'unitName' | 'unitPrice' | 'discountPercentage' | 'lineItemAmount'
-> & {
-  type: 'text';
+export type CustomLineItem = Omit<LineItem, 'lineItemAmount' | 'id'>;
+export type CustomLineItemXRechnung = CustomLineItem;
+export type TextLineItem = {
+  type: string;
+  name: string;
+  description: string;
+  
 };
 
 export type UnitPrice = {
-  currency: 'EUR';
+  currency: string;
   netAmount: number;
   taxRatePercentage: TaxRatePercentage;
 };
@@ -119,7 +116,7 @@ export type UnitPriceGross = Required<Partial<UnitPrice>, 'currency' | 'taxRateP
 
 // 3
 export type TotalPrice = {
-  currency: 'EUR';
+  currency: string;
   totalNetAmount: number;
   totalGrossAmount: number;
   totalTaxAmount: number;
@@ -134,15 +131,7 @@ export type TaxAmount = {
   netAmount: number;
 };
 // 5
-export type TaxType =
-  | 'gross'
-  | 'net'
-  | 'vatfree'
-  | 'intraCommunitySupply'
-  | 'constructionService13b'
-  | 'externalService13b'
-  | 'thirdPartyCountryService'
-  | 'thirdPartyCountryDelivery';
+export type TaxType = string;
 // 6
 export type PaymentConditions = {
   paymentTermLabel: string;
@@ -156,18 +145,17 @@ export type PaymentConditions = {
 // 7
 export type ShippingConditions = {
   shippingDate: string;
-  shippingType: 'service' | 'delivery' | 'serviceperiod' | 'deliveryperiod' | 'none';
+  shippingType: string;
 };
 export type ShippingConditionsPeriod = ShippingConditions & {
-  shippingType: 'serviceperiod' | 'deliveryperiod';
+  shippingType: string;
   shippingEndDate: string;
 };
-export type ShippingConditionsNone = Required<Partial<ShippingConditions>, 'shippingType'> & {
-  shippingType: 'none';
-};
-// multiple usage
-export type TaxRatePercentage = 0 | 5 | 7 | 16 | 19;
+export type ShippingConditionsNone = Required<Partial<ShippingConditions>, 'shippingType'>;
 
-export type OptionalParameter = {
+// multiple usage
+export type TaxRatePercentage = number;
+
+export type OptionalFinalized = {
   finalized?: boolean;
 };

@@ -24,7 +24,7 @@ export type RecurringTemplate = Omit<
   };
 };
 
-export type Parameters = {
+export type PagingParameters = {
   size?: number;
   page?: number;
   sort?: string;

@@ -5,9 +5,9 @@ import { PaymentCondition } from './paymentCondition.type';
 import uri from 'uri-tag';
 
 export class PaymentConditionClient extends BaseClient {
-  async retrievePaymentConditionList(id: string): Promise<Result<PaymentCondition, RequestError>> {
+  async retrievePaymentConditionList(): Promise<Result<PaymentCondition, RequestError>> {
     return this.axios
-      .get<PaymentCondition>(uri`/payment-condition/${id}`)
+      .get<PaymentCondition>(`/payment-conditions`)
       .then((result) => Ok(result.data))
       .catch((error) => {
         return Err(handleRequestError(error));

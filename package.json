@@ -1,5 +1,5 @@
 {
-  "name": "@elbstack/lexoffice-client",
+  "name": "@elbstack/lexoffice-client-js",
   "version": "0.1.0",
   "description": "An universal client for the Lexoffice API written in Typescript",
   "main": "dist/index.js",
@@ -12,7 +12,6 @@
     "dev": "microbundle watch",
     "lint": "eslint 'src/**/*.ts' --fix",
     "test": "jest",
-    "prepublish": "build",
     "start:example": "ts-node example/index.ts"
   },
   "repository": {
@@ -42,6 +41,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
+    "local-package-publisher": "^1.0.4",
     "microbundle": "^0.13.0",
     "nock": "^13.0.7",
     "prettier": "^2.2.1",

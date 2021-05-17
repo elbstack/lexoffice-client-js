@@ -1,7 +1,7 @@
 export type PostingCategory = {
   id: string;
   name: string;
-  type: 'income' | 'outgo';
+  type: string;
   contactRequired: boolean;
   splitAllowed: boolean;
   groupName: string;

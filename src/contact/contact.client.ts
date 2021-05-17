@@ -7,7 +7,7 @@ import {
   ContactCreateResponse,
   ContactRetrieveResponse,
   ContactUpdateResponse,
-  Parameters,
+  PagingParameters,
 } from '../index';
 import { Err, Ok, Result } from 'ts-results';
 import { handleRequestError, RequestError } from '../request-error';
@@ -48,10 +48,8 @@ export class ContactsClient extends BaseClient {
   }
 
   async filterContact(
-    filter?: OptionalFilters & Partial<Parameters>,
+    filter?: OptionalFilters & Partial<PagingParameters>,
   ): Promise<Result<ContactFilterRetrieveResponse, RequestError>> {
-    console.log('filter: ', filter);
-
     return this.axios
       .get<ContactFilterRetrieveResponse>(uri`/contacts`, { params: filter })
       .then((result) => Ok(result.data))

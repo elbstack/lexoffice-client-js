@@ -25,9 +25,9 @@ export type Quotation = {
   updatedDate: string;
   expirationDate: string;
   version: number;
-  language: 'de' | 'en';
+  language: string;
   archived: boolean;
-  voucherStatus: 'draft' | 'open' | 'accepted' | 'rejected';
+  voucherStatus: string;
   voucherNumber: string;
   voucherDate: string;
   address: Address | AddressExistingLexofficeContact | AddressNonExistingLexofficeContact;
@@ -50,7 +50,7 @@ export type Quotation = {
 export type Optionals = {
   optional?: boolean;
   alternative?: boolean;
-  subItems: (
+  subItems?: (
     | (LineItem & {
         optional?: boolean;
         alternative?: boolean;

@@ -75,7 +75,7 @@ export type PhoneNumbers = EmailAddresses & {
 export type ContactCreatePerson = {
   id?: string;
   organizationId?: string;
-  version: 0;
+  version: number;
   roles:
     | {
         customer: {};
@@ -104,7 +104,7 @@ export type ContactCreatePerson = {
 export type ContactCreateCompany = {
   id?: string;
   organizationId?: string;
-  version: 0;
+  version: number;
   roles:
     | {
         customer: {};

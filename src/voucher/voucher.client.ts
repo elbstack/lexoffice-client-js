@@ -2,7 +2,13 @@ import { Err, Ok, Result } from 'ts-results';
 import { FileResponse } from '..';
 import { BaseClient } from '../base.client';
 import { handleRequestError, RequestError } from '../request-error';
-import { CreateVoucher, Voucher, VoucherCreateResponse, Vouchers } from './voucher.type';
+import {
+  CreateVoucher,
+  VoucherNumber,
+  Voucher,
+  VoucherCreateResponse,
+  Vouchers,
+} from './voucher.type';
 import FormData from 'form-data';
 import uri from 'uri-tag';
 
@@ -39,9 +45,11 @@ export class VoucherClient extends BaseClient {
       });
   }
 
-  async filterVoucher(voucherNumber?: string): Promise<Result<Partial<Vouchers>, RequestError>> {
+  async filterVoucher(
+    voucherNumber: VoucherNumber,
+  ): Promise<Result<Partial<Vouchers>, RequestError>> {
     return this.axios
-      .get<Partial<Vouchers>>(uri`/vouchers`, { params: voucherNumber })
+      .get<Partial<Vouchers>>(`/vouchers`, { params: voucherNumber })
       .then((result) => Ok(result.data))
       .catch((error) => {
         return Err(handleRequestError(error));
@@ -53,7 +61,7 @@ export class VoucherClient extends BaseClient {
     id: string,
   ): Promise<Result<FileResponse, RequestError>> {
     return this.axios
-      .post<FileResponse>(uri`/vouchers/${id}/files`, {
+      .post<FileResponse>(uri`/vouchers/${id}/files`, data, {
         headers: {
           ...data.getHeaders(),
         },

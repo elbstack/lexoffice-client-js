@@ -5,7 +5,7 @@ Node.js/Typescript client library for the [lexoffice Public API](https://www.lex
 ## Installation
 
 ```bash
-npm install lexoffice-client-js
+npm install @elbstack/lexoffice-client-js
 ```
 
 ## Documentation
@@ -16,53 +16,49 @@ You can find the lexoffice API documentation [here](https://developers.lexoffice
 
 To get your API Key, you must already be a lexoffice user. Get it [here](https://app.lexoffice.de/settings/#/public-api).
 
-**Side note for literal types**
+```ts
+import { Client } from '@elbstack/lexoffice-client-js';
 
-Some type properties are typed as literal types, as there may be just one/a few options accepted by the lexoffice API. In this case for posting any sort of data, either add "as const" to the literally typed property or do not type the whole object at all.
-
-**Running**
-
-```js
-const { Client } = require('lexoffice-client-js');
-```
-
-**Type Checking**
-
-```js
-import { Client } from ('lexoffice-client-js');
-```
-
-**Both cases**
-
-```js
 const client = new Client({ YOUR_API_KEY });
 ```
 
 ## Examples
 
+All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results). To properly use the advantages of ts-results,all client responses should be processed similar to the following:
+
+```ts
+if (YOUR_RESULT.ok) {
+  const YOUR_VARIABLE = YOUR_RESULT.val;
+  // Work with your result
+} else {
+  // Your request returned an error
+  const error = YOUR_RESULT.val;
+  console.log('error:', error);
+}
+```
+
 ### Retrieve an invoice
 
-```js
+```ts
 const retrievedInvoice = await client.retrieveInvoice({ YOUR_INVOICE_ID });
 ```
 
+# ts-results umgang (non throwing functions)
+
 ### Create an invoice
 
-```js
+```ts
 const createdInvoiceResponse = await client.createInvoice(
   { YOUR_INVOICE_OBJECT_OR_XRECHNUNG },
-  { OPTIONAL_BOOLEAN },
+  { OPTIONAL_FILTER },
 );
 ```
 
-### Upload File
+### Upload File ( one option )
 
-```js
+```ts
 let fs = require('fs');
-let FormData: {
-  new(form?: HTMLFormElement | undefined): FormData,
-  prototype: FormData,
-} = require('form-data');
+let FormData = require('form-data');
 
 let data = new FormData();
 
@@ -72,6 +68,22 @@ data.append('type', 'voucher');
 const uploadedFileResponse = await client.uploadFile(data);
 ```
 
+## Side notes in addition to the official docs to avoid common errors
+
+### Updating
+
+For updating any type of vouchers where the "version" property is required, you first need to retrieve it and use the current "version" value to properly update.
+
+### Rendering Document File Id
+
+Only possible for any type of vouchers that are not in "draft" mode.
+
 ### Download File
 
-**Note: The required id is not the id itself, it is the documentFileId, which comes as a key of the "files" property while retrieving any sort of voucher.s**
+The required id is not the id itself, it is the documentFileId, which can be required with the matching
+
+```ts
+renderXXXDocumentFileId({ id });
+```
+
+methods.

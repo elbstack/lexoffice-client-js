@@ -8,16 +8,16 @@ import {
   XRechnung,
   DocumentFileId,
 } from './invoice-dto.type';
-import { OptionalParameter } from './invoice.type';
+import { OptionalFinalized } from './invoice.type';
 import uri from 'uri-tag';
 
 export class InvoiceClient extends BaseClient {
   async createInvoice(
     invoice: InvoiceCreate | XRechnung,
-    optionalParameter?: OptionalParameter,
+    optionalFinalized?: OptionalFinalized,
   ): Promise<Result<InvoiceCreateResponse, RequestError>> {
     return this.axios
-      .post<InvoiceCreateResponse>('/invoices', invoice, { params: optionalParameter })
+      .post<InvoiceCreateResponse>('/invoices', invoice, { params: optionalFinalized })
       .then((result) => Ok(result.data))
       .catch((error) => {
         return Err(handleRequestError(error));

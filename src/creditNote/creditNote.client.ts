@@ -6,16 +6,16 @@ import {
   CreditNoteCreateResponse,
   CreditNoteRetrieveResponse,
 } from './creditNote.type';
-import { DocumentFileId, OptionalParameter } from '..';
+import { DocumentFileId, OptionalFinalized } from '..';
 import uri from 'uri-tag';
 
 export class CreditNoteClient extends BaseClient {
   async createCreditNote(
     creditNote: CreditNoteCreate,
-    optionalParameter?: OptionalParameter,
+    optionalFinalized?: OptionalFinalized,
   ): Promise<Result<CreditNoteCreateResponse, RequestError>> {
     return this.axios
-      .post<CreditNoteCreateResponse>('/credit-notes', creditNote, { params: optionalParameter })
+      .post<CreditNoteCreateResponse>('/credit-notes', creditNote, { params: optionalFinalized })
       .then((result) => Ok(result.data))
       .catch((error) => {
         return Err(handleRequestError(error));

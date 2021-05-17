@@ -4,7 +4,7 @@ import { InvoiceCreateResponse } from '..';
 export type Voucher = {
   id: string;
   organizationId: string;
-  type: 'salesinvoice' | 'salescreditnote' | 'purchaseinvoice' | 'purchasecreditnote';
+  type: string;
   voucherStatus: string;
   voucherNumber: string;
   voucherDate: string;
@@ -44,4 +44,8 @@ export type VoucherCreateResponse = InvoiceCreateResponse;
 
 export type Vouchers = {
   content: Voucher[];
+};
+
+export type VoucherNumber = {
+  voucherNumber: string;
 };

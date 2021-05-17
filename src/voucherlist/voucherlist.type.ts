@@ -16,27 +16,8 @@ export type Voucherlist = {
 };
 
 export type FilterParameter = {
-  voucherType:
-    | 'salesinvoice'
-    | 'salescreditnote'
-    | 'purchaseinvoice'
-    | 'purchasecreditnote'
-    | 'invoice'
-    | 'creditnote'
-    | 'orderconfirmation'
-    | 'quotation'
-    | 'downpaymentinvoice';
-  voucherStatus:
-    | 'draft'
-    | 'open'
-    | 'overdue'
-    | 'paid'
-    | 'paidoff'
-    | 'voided'
-    | 'transferred'
-    | 'sepadebit'
-    | 'accepted'
-    | 'rejected';
+  voucherType: string;
+  voucherStatus: string;
   archived?: boolean;
   size?: number;
   sort?: string;
