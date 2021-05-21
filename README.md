@@ -24,7 +24,7 @@ const client = new Client({ YOUR_API_KEY });
 
 ## Examples
 
-All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results). To properly use the advantages of ts-results,all client responses should be processed similar to the following:
+All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results). If you want to use the advantages of ts-results, all client responses should be processed similar to the following:
 
 ```ts
 if (YOUR_RESULT.ok) {
@@ -34,7 +34,78 @@ if (YOUR_RESULT.ok) {
   // Your request returned an error
   const error = YOUR_RESULT.val;
   console.log('error:', error);
+  // Further error checking is possible by
+  if (error instanceof RequestError) {
+    console.log('Hello instance of RequestError!');
+
+    if (error instanceof RequestNotFoundError) {
+      console.log('Wow, it looks like you have many instances!');
+    }
+    if (error instanceof RequestMethodNotAcceptableLegacyError) {
+      console.log('Seems, that you take care of your legacy!');
+    }
+  }
 }
+```
+
+### Possible Error Instances
+
+#### Regular Errors of type RequestError
+
+```ts
+400:
+type RequestBadRequestError
+
+401:
+type RequestUnauthorizedError
+
+402:
+type RequestPaymentRequiredError
+
+403:
+type RequestForbiddenError
+
+404:
+type RequestNotFoundError
+
+405:
+type RequestMethodNotAllowedError
+
+406:
+type RequestMethodNotAcceptableError
+
+409:
+type RequestConflictError
+
+415:
+type RequestUnsupportedMediaTypeError
+
+429:
+type RequestTooManyRequestsError
+
+500:
+type RequestInternalServerError
+
+503:
+type RequestServiceUnavailableError
+
+504:
+type RequestGatewayTimeoutError
+
+```
+
+#### Legacy Errors of type RequestError
+
+```ts
+400:
+type RequestBadRequestLegacyError
+
+406:
+type RequestMethodNotAcceptableLegacyError
+
+500:
+type RequestInternalServerLegacyError
+
 ```
 
 ### Retrieve an invoice
@@ -42,8 +113,6 @@ if (YOUR_RESULT.ok) {
 ```ts
 const retrievedInvoice = await client.retrieveInvoice({ YOUR_INVOICE_ID });
 ```
-
-# ts-results umgang (non throwing functions)
 
 ### Create an invoice
 
