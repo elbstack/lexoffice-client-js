@@ -1,6 +1,26 @@
-# lexoffice-client-js
+<p align = "center">
+  <img
+    src="/images/lexoffice_logo_RGB.png"
+    width="96"
+    height="96"
+  />
+</p>
 
-Node.js/Typescript client library for the [lexoffice Public API](https://www.lexoffice.de/partner/public-api/).
+<h1 align = "center">lexoffice-client-js</h1>
+
+<p align="center">
+  <strong>Javascript client library for the [lexoffice Public API](https://www.lexoffice.de/partner/public-api/).</strong>
+</p>
+<ul align="center">
+<li>fully typed</li>
+<li>promise based</li>
+<li>non throwing</li>
+</ul>
+---
+
+- fully typed
+- promise based
+- non throwing
 
 ## Installation
 
@@ -19,12 +39,50 @@ To get your API Key, you must already be a lexoffice user. Get it [here](https:/
 ```ts
 import { Client } from '@elbstack/lexoffice-client-js';
 
-const client = new Client({ YOUR_API_KEY });
+const client = new Client(YOUR_LEXOFFICE_API_KEY);
 ```
 
 ## Examples
 
-All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results). If you want to use the advantages of ts-results, all client responses should be processed similar to the following:
+All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results).
+
+### Retrieve an invoice
+
+```ts
+const invoiceResult = await client.retrieveInvoice('caf4e0c3-c3e8-4a06-bcfe-346bc7190b2');
+
+if (invoiceResult.ok) {
+  const invoice = invoiceResult.val;
+} else {
+  console.error('An error occured');
+}
+```
+
+### Create an invoice
+
+```ts
+const createdInvoiceResponse = await client.createInvoice(YOUR_INVOICE_OBJECT_OR_XRECHNUNG, {
+  OPTIONAL_FILTERS,
+});
+```
+
+### Upload File ( one option )
+
+```ts
+let fs = require('fs');
+let FormData = require('form-data');
+
+let data = new FormData();
+
+data.append('file', fs.createReadStream(__dirname + '/yourFolder/yourFile'));
+data.append('type', 'voucher');
+
+const uploadedFileResponse = await client.uploadFile(data);
+```
+
+## Error Handling
+
+If you want to use the advantages of ts-results, all client responses should be processed similar to the following:
 
 ```ts
 if (YOUR_RESULT.ok) {
@@ -106,35 +164,6 @@ type RequestMethodNotAcceptableLegacyError
 500:
 type RequestInternalServerLegacyError
 
-```
-
-### Retrieve an invoice
-
-```ts
-const retrievedInvoice = await client.retrieveInvoice({ YOUR_INVOICE_ID });
-```
-
-### Create an invoice
-
-```ts
-const createdInvoiceResponse = await client.createInvoice(
-  { YOUR_INVOICE_OBJECT_OR_XRECHNUNG },
-  { OPTIONAL_FILTER },
-);
-```
-
-### Upload File ( one option )
-
-```ts
-let fs = require('fs');
-let FormData = require('form-data');
-
-let data = new FormData();
-
-data.append('file', fs.createReadStream(__dirname + '/yourFolder/yourFile'));
-data.append('type', 'voucher');
-
-const uploadedFileResponse = await client.uploadFile(data);
 ```
 
 ## Side notes in addition to the official docs to avoid common errors
