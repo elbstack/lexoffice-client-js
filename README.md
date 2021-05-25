@@ -258,7 +258,10 @@ RequestMethodNotAcceptableLegacyError</td>
 <td>ewfwef</td>
 <td>wefwe</td>
 </tr>
-<tr></tr>
+<tr>
+<td>""</td>
+<td>""</td>
+</tr>
 <th>contact</th>
 <th>country</th>
 <tr>
