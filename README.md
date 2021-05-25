@@ -1,9 +1,3 @@
-<p align = "center">
-  <img
-    src="/images/lexoffice_logo_RGB.png" 
-  />
-</p>
-
 <h1 align = "center">lexoffice-client-js</h1>
 
 <p align="center">
@@ -13,6 +7,15 @@
 <p align="center"><strong>fully typed</strong></p>
 <p align="center"><strong>promise based</strong></p>
 <p align="center"><strong>non throwing</strong></p>
+
+---
+
+## Contents
+
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Usage](#usage)
+- [Examples](#examples)
 
 ## Installation
 
@@ -36,7 +39,7 @@ const client = new Client(YOUR_LEXOFFICE_API_KEY);
 
 ## Examples
 
-All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results).
+All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results) which is a typescript implementation of Rust's [Result](https://doc.rust-lang.org/std/result/) and [Option](https://doc.rust-lang.org/std/option/) objects. It brings compile-time error checking and optional values to typescript.
 
 ### Retrieve an invoice
 
