@@ -406,14 +406,13 @@ methods.
 
 <h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> Brought to you by elbstack</h2>
 
-elbstack ist ein Software Engineering & Design-Unternehmen. Wir hinterfragen, wir beraten, und wir freuen uns darauf, eurem nächsten Projekt zum Erfolg zu verhelfen.
+elbstack ist ein Software Engineering & Design-Unternehmen. Wir hinterfragen, wir beraten, und wir freuen uns darauf, eurem nächsten Projekt zum Erfolg zu verhelfen.<br>
 Wir bieten Softwarentwicklung und -design als Dienstleistung an. Damit unterstützen wir euch bei der Umsetzung eurer Projekte - egal ob mit einzelnen Mitarbeitern oder durch ein ganzes Team. Wir arbeiten dabei gerne Remote oder auch bei euch vor Ort.
 
 ### 👩🏻‍💻👨🏽‍💻 We are hiring!
 
 <p>Wir sind keine klassische Software-Agentur, sondern ein selbstorganisiertes Unternehmen mit eigenem Startup-Inkubator. Du kannst selbst entscheiden, wie viel, woran und für wen du arbeiten möchtest. Akquiriere deine eigenen Kunden und Projekte oder setze endlich dein Nebenprojekt in die Tat um – und mache daraus vielleicht sogar ein eigenes Startup.</p>
 <p>Sounds like a scam?</p>
-<ul>
-<li><a href="https://www.kununu.com/de/elbstack2">➡️ Go and check kununu.com</a></li>
-<li><a href="https://elbstack.com">➡️ Our website</a></li>
-</ul>
+
+<a href="https://www.kununu.com/de/elbstack2">➡️ Go and check kununu.com</a>
+<a href="https://elbstack.com">➡️ Our website</a>
