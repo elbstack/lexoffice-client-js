@@ -10,7 +10,7 @@
 
 ---
 
-## Contents
+## 📦 Contents
 
 - [Installation](#installation)
 - [Documentation](#documentation)
@@ -20,19 +20,19 @@
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
 - [Error handling](#error-handling)
-- [Side notes](#side-notes)
+- [Side notes](#side-notes-in-addition-to-the-official-docs-to-avoid-common-errors)
 
-## Installation
+## 🛠 Installation
 
 ```bash
 npm install @elbstack/lexoffice-client-js
 ```
 
-## Documentation
+## 📚 Documentation
 
 You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
-## Usage
+## 🔑 Usage
 
 To get your API Key, you must already be a lexoffice user. Get it [here](https://app.lexoffice.de/settings/#/public-api).
 
@@ -42,7 +42,7 @@ import { Client } from '@elbstack/lexoffice-client-js';
 const client = new Client(YOUR_LEXOFFICE_API_KEY);
 ```
 
-## Examples
+## 💡 Examples
 
 All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error handling](#error-handling).
 
@@ -134,7 +134,7 @@ if (uploadedFileResult.ok) {
 }
 ```
 
-## Error handling
+## ❌ Error handling
 
 As mentioned above, the returned promises are formatted by ts-results which is a typescript implementation of Rust's [Result](https://doc.rust-lang.org/std/result/) and [Option](https://doc.rust-lang.org/std/option/) objects. It brings compile-time error checking and optional values to typescript.
 All errors are instances of type RequestError.
@@ -248,7 +248,7 @@ RequestMethodNotAcceptableLegacyError</td>
 </tr>
 </table>
 
-## Side notes in addition to the official docs to avoid common errors
+## 🔖 Side notes in addition to the official docs to avoid common errors
 
 ### Updating
 
