@@ -411,7 +411,9 @@ Wir bieten Softwarentwicklung und -design als Dienstleistung an. Damit unterstü
 
 ### 👩🏻‍💻👨🏽‍💻 We are hiring!
 
-Wir sind keine klassische Software-Agentur, sondern ein selbstorganisiertes Unternehmen mit eigenem Startup-Inkubator. Du kannst selbst entscheiden, wie viel, woran und für wen du arbeiten möchtest. Akquiriere deine eigenen Kunden und Projekte oder setze endlich dein Nebenprojekt in die Tat um – und mache daraus vielleicht sogar ein eigenes Startup.
-Sounds like a scam?
-➡️ [Go and check kununu.com](https://www.kununu.com/de/elbstack2)
-➡️ [Our website](https://elbstack.com)
+<p>Wir sind keine klassische Software-Agentur, sondern ein selbstorganisiertes Unternehmen mit eigenem Startup-Inkubator. Du kannst selbst entscheiden, wie viel, woran und für wen du arbeiten möchtest. Akquiriere deine eigenen Kunden und Projekte oder setze endlich dein Nebenprojekt in die Tat um – und mache daraus vielleicht sogar ein eigenes Startup.</p>
+<p>Sounds like a scam?</p>
+<ul>
+<li><a href="https://www.kununu.com/de/elbstack2">➡️ Go and check kununu.com</a></li>
+<li><a href="https://elbstack.com">➡️ Our website</a></li>
+</ul>
