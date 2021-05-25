@@ -166,7 +166,7 @@ if (YOUR_RESULT.ok) {
 
 #### Regular errors
 
-<table width="80%">
+<table width="500">
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
@@ -237,7 +237,7 @@ if (YOUR_RESULT.ok) {
 
 #### Legacy errors (used by the endpoints files, profiles and contacts)
 
-<table width="80%">
+<table width="500">
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
