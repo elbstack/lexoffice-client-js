@@ -22,8 +22,11 @@
     <img alt="npm (develop)" src="https://img.shields.io/npm/v/elbstack/develop?color=%23e044aa"/>
   </a>
     <br>
+  <a href="https://github.com/badges/shields/pulse" >
+    <img src="https://img.shields.io/github/commit-activity/m/elbstack/lexoffice-client-js" alt="Activity" />        
+  </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/system-ui/theme-ui" alt="Contributors" />
+    <img src="https://img.shields.io/github/contributors/elbstack/lexoffice-client-js" alt="Contributors" />
   </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/blob/main/LICENSE">
     <img
