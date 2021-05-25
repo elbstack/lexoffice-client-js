@@ -38,7 +38,7 @@
   - [Voucher](#voucher)
   - [Voucherlist](#voucherlist)
 - [🔖 Side notes](#side-notes)
-<ul><li><a href="#about"><img src="/images/favicon-32x32.png"width="16" height="16"/> About us</a></li></ul>
+<ul><li><a href="#about"><img src="/images/favicon-32x32.png"width="20" height="20"/> About us</a></li></ul>
 
 ---
 
@@ -404,4 +404,4 @@ renderXXXDocumentFileId({ id });
 
 methods.
 
-<h2 name="about"><img src="images/favicon-32x32.png" width="20" height="20"/> About Elbstack</h2>
+<h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> About Elbstack</h2>
