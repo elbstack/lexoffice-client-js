@@ -251,17 +251,59 @@ RequestMethodNotAcceptableLegacyError</td>
 
 <h2 name="provided-methods">🛠 Provided methods grouped by endpoint</h2>
 
-### contact
+### Contact
 
 ```ts
-updateContact();
-filterContact();
+updateContact(id, contact);
+filterContact(filter?);
 ```
 
-### country
+### Country
 
 ```ts
 retrieveListOfCountries();
+```
+
+### Credit note
+
+```ts
+
+```
+
+###
+
+```ts
+
+```
+
+###
+
+```ts
+
+```
+
+###
+
+```ts
+
+```
+
+###
+
+```ts
+
+```
+
+###
+
+```ts
+
+```
+
+###
+
+```ts
+
 ```
 
 <h2 name="side-notes">🔖 Side notes</h2>
