@@ -1,25 +1,20 @@
 <p align = "center">
   <img
-    src="/images/lexoffice_logo_RGB.png"
-    
+    src="/images/lexoffice_logo_RGB.png" 
   />
 </p>
 
 <h1 align = "center">lexoffice-client-js</h1>
 
 <p align="center">
-  <strong>Javascript client library for the [lexoffice Public API](https://www.lexoffice.de/partner/public-api/).</strong>
+  <strong>Javascript client library for the <a href="https://www.lexoffice.de/partner/public-api/">lexoffice Public API<a>.</strong>
 </p>
 <ul align="center">
-<li align="center">fully typed</li>
-<li align="center">promise based</li>
-<li align="center">non throwing</li>
+<li align="center"><strong>fully typed</strong></li>
+<li align="center"><strong>promise based</strong></li>
+<li align="center"><strong>non throwing</strong></li>
 </ul>
 ---
-
-- fully typed
-- promise based
-- non throwing
 
 ## Installation
 
