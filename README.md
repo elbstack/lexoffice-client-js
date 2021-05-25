@@ -1,8 +1,7 @@
 <p align = "center">
   <img
     src="/images/lexoffice_logo_RGB.png"
-    width="96"
-    height="96"
+    
   />
 </p>
 
@@ -12,9 +11,9 @@
   <strong>Javascript client library for the [lexoffice Public API](https://www.lexoffice.de/partner/public-api/).</strong>
 </p>
 <ul align="center">
-<li>fully typed</li>
-<li>promise based</li>
-<li>non throwing</li>
+<li align="center">fully typed</li>
+<li align="center">promise based</li>
+<li align="center">non throwing</li>
 </ul>
 ---
 
