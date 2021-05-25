@@ -167,6 +167,7 @@ if (YOUR_RESULT.ok) {
 #### Regular errors
 
 <table width="500">
+<th>Regular errors</th>
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
