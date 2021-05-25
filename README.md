@@ -12,7 +12,7 @@
 
 ## 📦 Contents
 
-- [🛠 Installation](#installation)
+- [⚙️ Installation](#installation)
 - [📚 Documentation](#documentation)
 - [🔑 Usage](#usage)
 - [💡 Examples](#examples)
@@ -20,11 +20,12 @@
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
 - [❌ Error handling](#error-handling)
+- [🛠 Provided methods](#provided-methods)
 - [🔖 Side notes](#side-notes)
 
 ---
 
-<h2 name="installation" >🛠 Installation</h2>
+<h2 name="installation" >⚙️ Installation</h2>
 
 ```bash
 npm install @elbstack/lexoffice-client-js
@@ -248,7 +249,22 @@ RequestMethodNotAcceptableLegacyError</td>
 </tr>
 </table>
 
-## Provided Methods
+<h2 name="provided-methods">🛠 Provided methods</h2>
+
+<table>
+<th>contact</th>
+<th>country</th>
+<tr>
+<td>ewfwef</td>
+<td>wefwe</td>
+</tr>
+<tr></tr>
+<th>contact</th>
+<th>country</th>
+<tr>
+<td>ewfwef</td>
+<td>wefwe</td>
+</table>
 
 <h2 name="side-notes">🔖 Side notes</h2>
 
