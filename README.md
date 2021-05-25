@@ -9,12 +9,10 @@
 <p align="center">
   <strong>Javascript client library for the <a href="https://www.lexoffice.de/partner/public-api/">lexoffice Public API<a>.</strong>
 </p>
-<ul align="center">
-<li align="center"><strong>fully typed</strong></li>
-<li align="center"><strong>promise based</strong></li>
-<li align="center"><strong>non throwing</strong></li>
-</ul>
----
+
+<p align="center"><strong>fully typed</strong></p>
+<p align="center"><strong>promise based</strong></p>
+<p align="center"><strong>non throwing</strong></p>
 
 ## Installation
 
