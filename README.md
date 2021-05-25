@@ -21,8 +21,18 @@
   <a>
     <img alt="npm (develop)" src="https://img.shields.io/npm/v/elbstack/develop?color=%23e044aa"/>
   </a>
-</p>
----
+    <br>
+  <a href="https://github.com/elbstack/lexoffice-client-js/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/system-ui/theme-ui" alt="Contributors" />
+  </a>
+  <a href="https://github.com/elbstack/lexoffice-client-js/blob/main/LICENSE">
+    <img
+      src="https://badgen.net/badge/license/MIT/blue"
+      alt="MIT license"
+    />
+  </a>
+
+## </p>
 
 ## 📦 Contents
 
