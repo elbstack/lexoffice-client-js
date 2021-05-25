@@ -12,17 +12,17 @@
 
 ## 📦 Contents
 
-- [Installation](#installation)
+- [🛠 Installation](#installation)
 - [Documentation](#documentation)
-- [Usage](#usage)
-- [Examples](#💡-examples)
+- [🔑 Usage](#usage)
+- [💡 Examples](#💡-examples)
   - [Retrieve an invoice](#retrieve-an-invoice)
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
 - [Error handling](#error-handling)
 - [Side notes](#side-notes-in-addition-to-the-official-docs-to-avoid-common-errors)
 
-## 🛠 Installation
+## Installation
 
 ```bash
 npm install @elbstack/lexoffice-client-js
@@ -32,7 +32,7 @@ npm install @elbstack/lexoffice-client-js
 
 You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
-## 🔑 Usage
+## Usage
 
 To get your API Key, you must already be a lexoffice user. Get it [here](https://app.lexoffice.de/settings/#/public-api).
 
@@ -42,7 +42,7 @@ import { Client } from '@elbstack/lexoffice-client-js';
 const client = new Client(YOUR_LEXOFFICE_API_KEY);
 ```
 
-## 💡 Examples
+## Examples
 
 All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error handling](#error-handling).
 
