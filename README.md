@@ -207,7 +207,7 @@ if (YOUR_RESULT.ok) {
 }
 ```
 
-#### Error codes and types
+### Error codes and types
 
 <table>
 <th>Regular errors</th>
@@ -431,7 +431,7 @@ renderXXXDocumentFileId({ id });
 
 methods.
 
-<h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> Brought to you by elbstack</h2>
+<h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> This package has been brought to you by elbstack!</h2>
 
 elbstack ist ein Software Engineering & Design-Unternehmen. Wir hinterfragen, wir beraten, und wir freuen uns darauf, eurem nächsten Projekt zum Erfolg zu verhelfen.<br>
 Wir bieten Softwarentwicklung und -design als Dienstleistung an. Damit unterstützen wir euch bei der Umsetzung eurer Projekte - egal ob mit einzelnen Mitarbeitern oder durch ein ganzes Team. Wir arbeiten dabei gerne Remote oder auch bei euch vor Ort.
