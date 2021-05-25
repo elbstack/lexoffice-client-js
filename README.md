@@ -167,10 +167,10 @@ if (YOUR_RESULT.ok) {
 <table>
 <th>Regular errors</th>
 <tr>
-<th width="10%">❌ Error code</th>
-<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
-<th>❌ Server error code</th>
-<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
+<th width="15%">❌ Error code</th>
+<th width="35%"><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
+<th width="15%">❌ Server error code</th>
+<th width="35%"><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
 </tr>
 <tr>
 <td>400</td>
