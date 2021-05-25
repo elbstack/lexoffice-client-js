@@ -251,60 +251,120 @@ RequestMethodNotAcceptableLegacyError</td>
 
 <h2 name="provided-methods">🛠 Provided methods grouped by endpoint</h2>
 
+The following list does not contain required arguments.
+
 ### Contact
 
 ```ts
-updateContact(...);
-filterContact(...);
+updateContact());
+filterContact();
 ```
 
 ### Country
 
 ```ts
-retrieveListOfCountries(...);
+retrieveListOfCountries();
 ```
 
 ### Credit note
 
 ```ts
-createCreditNote(...)
-retrieveCreditNote(...)
+createCreditNote();
+retrieveCreditNote();
+renderCreditNoteDocumentFileId();
 ```
 
-###
+### Down payment invoice
 
 ```ts
-
+retrieveDownPaymentInvoice();
 ```
 
-###
+### Event subscription
 
 ```ts
-
+createEventSubscription();
+retrieveEventSubscription();
+retrieveAllEventSubscriptions();
+deleteEventSubscription();
 ```
 
-###
+### File
 
 ```ts
-
+uploadFile();
+downloadFile();
 ```
 
-###
+### Invoice
 
 ```ts
-
+createInvoice();
+retrieveInvoice();
+renderInvoiceDocumentFileId();
 ```
 
-###
+### Order confirmation
 
 ```ts
-
+createOrderConfirmation();
+retrieveOrderConfirmation();
+renderOrderConfirmationDocumentFileId();
 ```
 
-###
+### Payment
 
 ```ts
+retrievePayment();
+```
 
+### Payment condition
+
+```ts
+retrievePaymentConditionList();
+```
+
+### Posting category
+
+```ts
+retrieveListPostingCategories();
+```
+
+### Profile
+
+```ts
+retrieveProfile();
+```
+
+### Quotation
+
+```ts
+createQuotation();
+retrieveQuotation();
+renderQuotationDocumentFileId();
+```
+
+### Recurring template
+
+```ts
+retrieveRecurringTemplate();
+retrieveAllRecurringTemplates();
+```
+
+### Voucher
+
+```ts
+createVoucher();
+retrieveVoucher();
+updateVoucher();
+filterVoucher();
+uploadFileToVoucher();
+```
+
+### Voucherlist
+
+```ts
+retrieveVoucherlist();
 ```
 
 <h2 name="side-notes">🔖 Side notes</h2>
