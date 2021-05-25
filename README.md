@@ -164,9 +164,9 @@ if (YOUR_RESULT.ok) {
 }
 ```
 
-#### Regular errors
+#### Error codes and types
 
-<table width="500">
+<table>
 <th>Regular errors</th>
 <tr>
 <th>❌ Error code</th>
@@ -231,6 +231,20 @@ if (YOUR_RESULT.ok) {
 <tr>
 <td>429</td>
 <td>RequestTooManyRequestsError</td>
+<td></td>
+<td></td>
+</tr>
+<th>Legacy errors (used by the endpoints files, profiles and contacts)</th>
+<tr>
+<td>400</td>
+<td>RequestBadRequestLegacyError</td>
+<td>500</td>
+<td>RequestInternalServerLegacyError</td>
+</tr>
+<tr>
+<td>406</td>
+<td>
+RequestMethodNotAcceptableLegacyError</td>
 <td></td>
 <td></td>
 </tr>
