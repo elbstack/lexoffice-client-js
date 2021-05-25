@@ -46,7 +46,7 @@ const client = new Client(YOUR_LEXOFFICE_API_KEY);
 
 ## Examples
 
-All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error Handling](#error-handling).
+All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error handling](#error-handling).
 
 ### Retrieve an invoice
 
@@ -166,7 +166,7 @@ if (YOUR_RESULT.ok) {
 
 #### Regular errors
 
-<table>
+<table width="80%">
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
@@ -237,7 +237,7 @@ if (YOUR_RESULT.ok) {
 
 #### Legacy errors (used by the endpoints files, profiles and contacts)
 
-<table>
+<table width="80%">
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
