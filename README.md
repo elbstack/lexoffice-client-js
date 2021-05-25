@@ -4,7 +4,7 @@
   <strong>Javascript client library for the <a href="https://www.lexoffice.de/partner/public-api/">lexoffice Public API<a>.</strong>
 </p>
 
-<p align="center"><strong>fully typed</strong></p>
+<p align="center"><strong><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458"/>fully typed</strong></p>
 <p align="center"><strong>promise based</strong></p>
 <p align="center"><strong>non throwing</strong></p>
 
