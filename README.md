@@ -20,8 +20,6 @@
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
 - [Error handling](#error-handling)
-  - [Regular errors](#regular-errors)
-  - [Legacy errors](#legacy-errors)
 - [Side notes](#side-notes)
 
 ## Installation
@@ -167,7 +165,7 @@ if (YOUR_RESULT.ok) {
 #### Error codes and types
 
 <table>
-<th>Regular errors</th>
+<th background-color="grey">Regular errors</th>
 <tr>
 <th>❌ Error code</th>
 <th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
@@ -235,30 +233,6 @@ if (YOUR_RESULT.ok) {
 <td></td>
 </tr>
 <th>Legacy errors (used by the endpoints files, profiles and contacts)</th>
-<tr>
-<td>400</td>
-<td>RequestBadRequestLegacyError</td>
-<td>500</td>
-<td>RequestInternalServerLegacyError</td>
-</tr>
-<tr>
-<td>406</td>
-<td>
-RequestMethodNotAcceptableLegacyError</td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-#### Legacy errors (used by the endpoints files, profiles and contacts)
-
-<table width="500">
-<tr>
-<th>❌ Error code</th>
-<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
-<th>❌ Server error code</th>
-<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
-</tr>
 <tr>
 <td>400</td>
 <td>RequestBadRequestLegacyError</td>
