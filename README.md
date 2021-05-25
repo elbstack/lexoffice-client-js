@@ -249,25 +249,20 @@ RequestMethodNotAcceptableLegacyError</td>
 </tr>
 </table>
 
-<h2 name="provided-methods">🛠 Provided methods</h2>
+<h2 name="provided-methods">🛠 Provided methods grouped by endpoint</h2>
 
-<table>
-<th width="40%">contact</th>
-<tr>
-<td>ewfwef</td>
-<td>wefwe</td>
-</tr>
-<tr>
-</table>
+### contact
 
-<table>
-<th width="40%">country</th>
-<tr>
-<td>ewfwef</td>
-<td>wefwe</td>
-</tr>
-<tr>
-</table>
+```ts
+updateContact();
+filterContact();
+```
+
+### country
+
+```ts
+retrieveListOfCountries();
+```
 
 <h2 name="side-notes">🔖 Side notes</h2>
 
