@@ -13,22 +13,24 @@
 ## 📦 Contents
 
 - [🛠 Installation](#installation)
-- [Documentation](#documentation)
+- [📚 Documentation](#documentation)
 - [🔑 Usage](#usage)
-- [💡 Examples](#💡-examples)
+- [💡 Examples](#examples)
   - [Retrieve an invoice](#retrieve-an-invoice)
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
-- [Error handling](#error-handling)
-- [Side notes](#side-notes-in-addition-to-the-official-docs-to-avoid-common-errors)
+- [❌ Error handling](#error-handling)
+- [🔖 Side notes](#side-notes-in-addition-to-the-official-docs-to-avoid-common-errors)
 
-## Installation
+---
+
+<h2 name="installation" >🛠 Installation</h2>
 
 ```bash
 npm install @elbstack/lexoffice-client-js
 ```
 
-## 📚 Documentation
+## Documentation
 
 You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
@@ -134,7 +136,7 @@ if (uploadedFileResult.ok) {
 }
 ```
 
-## ❌ Error handling
+## Error handling
 
 As mentioned above, the returned promises are formatted by ts-results which is a typescript implementation of Rust's [Result](https://doc.rust-lang.org/std/result/) and [Option](https://doc.rust-lang.org/std/option/) objects. It brings compile-time error checking and optional values to typescript.
 All errors are instances of type RequestError.
@@ -248,7 +250,9 @@ RequestMethodNotAcceptableLegacyError</td>
 </tr>
 </table>
 
-## 🔖 Side notes in addition to the official docs to avoid common errors
+## Provided Methods
+
+## Side notes in addition to the official docs to avoid common errors
 
 ### Updating
 
