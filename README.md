@@ -15,7 +15,7 @@
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Usage](#usage)
-- [Examples](#examples)
+- [Examples](#💡-examples)
   - [Retrieve an invoice](#retrieve-an-invoice)
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
