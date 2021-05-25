@@ -254,20 +254,21 @@ RequestMethodNotAcceptableLegacyError</td>
 ### Contact
 
 ```ts
-updateContact(id, contact);
-filterContact(filter?);
+updateContact(...);
+filterContact(...);
 ```
 
 ### Country
 
 ```ts
-retrieveListOfCountries();
+retrieveListOfCountries(...);
 ```
 
 ### Credit note
 
 ```ts
-
+createCreditNote(...)
+retrieveCreditNote(...)
 ```
 
 ###
