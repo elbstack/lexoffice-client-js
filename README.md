@@ -19,6 +19,10 @@
   - [Retrieve an invoice](#retrieve-an-invoice)
   - [Create an invoice](#create-an-invoice)
   - [Upload file](#upload-file)
+- [Error handling](#error-handling)
+  - [Regular errors](#regular-errors)
+  - [Legacy errors](#legacy-errors)
+- [Side notes](#side-notes)
 
 ## Installation
 
@@ -28,7 +32,7 @@ npm install @elbstack/lexoffice-client-js
 
 ## Documentation
 
-You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="20"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
+You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
 ## Usage
 
@@ -135,6 +139,7 @@ if (uploadedFileResult.ok) {
 ## Error handling
 
 As mentioned above, the returned promises are formatted by ts-results which is a typescript implementation of Rust's [Result](https://doc.rust-lang.org/std/result/) and [Option](https://doc.rust-lang.org/std/option/) objects. It brings compile-time error checking and optional values to typescript.
+All errors are instances of type RequestError.
 If you want to use the advantages of ts-results, all client responses should be processed similar to the following:
 
 ```ts
@@ -159,16 +164,14 @@ if (YOUR_RESULT.ok) {
 }
 ```
 
-### Possible Error Instances
-
-#### Regular Errors of type RequestError
+#### Regular errors
 
 <table>
 <tr>
-<th>Error code</th>
-<th>Error type in the lexoffice-client-js</th>
-<th>Error code</th>
-<th>Error type in the lexoffice-client-js</th>
+<th>❌ Error code</th>
+<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
+<th>❌ Server error code</th>
+<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
 </tr>
 <tr>
 <td>400</td>
@@ -177,68 +180,84 @@ if (YOUR_RESULT.ok) {
 <td>RequestInternalServerError</td>
 </tr>
 <tr>
+<td>401</td>
+<td>RequestUnauthorizedError</td>
+<td>503</td>
+<td>RequestServiceUnavailableError</td>
+</tr>
+<tr>
+<td>402</td>
+<td>RequestPaymentRequiredError</td>
+<td>504</td>
+<td>RequestGatewayTimeoutError</td>
+</tr>
+<tr>
+<td>403</td>
+<td>RequestForbiddenError</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>RequestNotFoundError</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>405</td>
+<td>RequestMethodNotAllowedError</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>406</td>
+<td>RequestMethodNotAcceptableError</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>409</td>
+<td>RequestConflictError</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>415</td>
+<td>RequestUnsupportedMediaTypeError</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>429</td>
+<td>RequestTooManyRequestsError</td>
 <td></td>
 <td></td>
 </tr>
 </table>
 
-```ts
-400:
-type RequestBadRequestError
+#### Legacy errors (used by the endpoints files, profiles and contacts)
 
-401:
-type RequestUnauthorizedError
-
-402:
-type RequestPaymentRequiredError
-
-403:
-type RequestForbiddenError
-
-404:
-type RequestNotFoundError
-
-405:
-type RequestMethodNotAllowedError
-
-406:
-type RequestMethodNotAcceptableError
-
-409:
-type RequestConflictError
-
-415:
-type RequestUnsupportedMediaTypeError
-
-429:
-type RequestTooManyRequestsError
-
-500:
-type RequestInternalServerError
-
-503:
-type RequestServiceUnavailableError
-
-504:
-type RequestGatewayTimeoutError
-
-```
-
-#### Legacy Errors of type RequestError
-
-```ts
-400:
-type RequestBadRequestLegacyError
-
-406:
-type RequestMethodNotAcceptableLegacyError
-
-500:
-type RequestInternalServerLegacyError
-
-```
+<table>
+<tr>
+<th>❌ Error code</th>
+<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
+<th>❌ Server error code</th>
+<th><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
+</tr>
+<tr>
+<td>400</td>
+<td>RequestBadRequestLegacyError</td>
+<td>500</td>
+<td>RequestInternalServerLegacyError</td>
+</tr>
+<tr>
+<td>406</td>
+<td>
+RequestMethodNotAcceptableLegacyError</td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 ## Side notes in addition to the official docs to avoid common errors
 
