@@ -7,7 +7,15 @@
 <p align="center"><strong><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> fully typed</strong></p>
 <p align="center"><strong><img src="/images/promise-logo.png" width="20" height="20"/> promise based</strong></p>
 <p align="center"><strong>❌ non throwing</strong></p>
-
+<br>
+<p align="center">
+  <a href="https://github.com/elbstack/lexoffice-client-js">
+    <img src="https://badgen.net/badge/-/github?icon=github&label" alt="GitHub" />
+  </a>
+  <a href="https://github.com/elbstack/lexoffice-client-js">
+    <img src="https://badgen.net/github/stars/elbstack/lexoffice-client-js" alt="GitHub Stars"/>
+  </a>
+</p>
 ---
 
 ## 📦 Contents
@@ -415,4 +423,4 @@ Wir bieten Softwarentwicklung und -design als Dienstleistung an. Damit unterstü
 <p>Sounds like a scam?</p>
 
 <a href="https://www.kununu.com/de/elbstack2">➡️ Go and check kununu.com</a><br>
-<a href="https://elbstack.com">➡️ Our website</a>
+<a href="https://elbstack.com">➡️ elbstack.com</a>
