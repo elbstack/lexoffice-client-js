@@ -426,10 +426,10 @@ Only possible for any type of vouchers that are not in "draft" mode.
 The required id is not the id itself, it is the documentFileId, which can be required with the matching
 
 ```ts
-renderXXXDocumentFileId({ id });
+renderXXXDocumentFileId(id);
 ```
 
-methods.
+methods and the vouchers id.
 
 <h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> This package has been brought to you by elbstack!</h2>
 
