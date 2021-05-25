@@ -252,7 +252,7 @@ RequestMethodNotAcceptableLegacyError</td>
 <h2 name="provided-methods">🛠 Provided methods</h2>
 
 <table>
-<th background-color="blue">contact</th>
+<th style="background-color:blue">contact</th>
 <th>country</th>
 <tr>
 <td>ewfwef</td>
