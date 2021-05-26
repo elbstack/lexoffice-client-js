@@ -365,56 +365,56 @@ renderOrderConfirmationDocumentFileId(id: string): Promise<Result<DocumentFileId
 ### Payment
 
 ```ts
-retrievePayment();
+retrievePayment(id: string): Promise<Result<Payment, RequestError>>
 ```
 
 ### Payment condition
 
 ```ts
-retrievePaymentConditionList();
+retrievePaymentConditionList(): Promise<Result<PaymentCondition, RequestError>>
 ```
 
 ### Posting category
 
 ```ts
-retrieveListPostingCategories();
+retrieveListPostingCategories(): Promise<Result<PostingCategory[], RequestError>>
 ```
 
 ### Profile
 
 ```ts
-retrieveProfile();
+retrieveProfile(): Promise<Result<Profile, RequestError>>
 ```
 
 ### Quotation
 
 ```ts
-createQuotation();
-retrieveQuotation();
-renderQuotationDocumentFileId();
+createQuotation(quotation: QuotationCreate, optionalFilter?: OptionalFinalized): Promise<Result<QuotationCreate, RequestError>>
+retrieveQuotation(id: string): Promise<Result<Partial<Quotation>, RequestError>>
+renderQuotationDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
 ### Recurring template
 
 ```ts
-retrieveRecurringTemplate();
-retrieveAllRecurringTemplates();
+retrieveRecurringTemplate(id: string): Promise<Result<Partial<RecurringTemplate>, RequestError>>
+retrieveAllRecurringTemplates(optionalFilter?: PagingParameters): Promise<Result<RecurringTemplates, RequestError>>
 ```
 
 ### Voucher
 
 ```ts
-createVoucher();
-retrieveVoucher();
-updateVoucher();
-filterVoucher();
-uploadFileToVoucher();
+createVoucher(voucher: CreateVoucher): Promise<Result<VoucherCreateResponse, RequestError>>
+retrieveVoucher(id: string): Promise<Result<Partial<Voucher>, RequestError>>
+updateVoucher(id: string, voucher: CreateVoucher): Promise<Result<VoucherCreateResponse, RequestError>>
+filterVoucher(voucherNumber: VoucherNumber): Promise<Result<Partial<Vouchers>, RequestError>>
+uploadFileToVoucher(data: FormData, id: string): Promise<Result<FileResponse, RequestError>>
 ```
 
 ### Voucherlist
 
 ```ts
-retrieveVoucherlist();
+retrieveVoucherlist(filterParameter: FilterParameter): Promise<Result<Voucherlist, RequestError>>
 ```
 
 <h2 name="side-notes">🔖 Side notes</h2>
@@ -435,6 +435,7 @@ The required id is not the id itself, it is the documentFileId, which can be req
 renderCreditNoteDocumentFileId(id);
 renderInvoiceDocumentFileId(id);
 renderOrderConfirmationDocumentFileId(id);
+renderQuotationDocumentFileId(id);
 ```
 
 <h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> This package has been brought to you by elbstack!</h2>
