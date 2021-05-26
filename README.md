@@ -75,6 +75,12 @@
 npm install @elbstack/lexoffice-client-js
 ```
 
+or
+
+```bash
+yarn add @elbstack/lexoffice-client-js
+```
+
 <h2 name="documentation">📚 Documentation</h2>
 
 You can find the official lexoffice API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
@@ -446,7 +452,7 @@ Only possible for any type of vouchers that are not in "draft" mode.
 
 ### Download File
 
-The required id is not the id itself, it is the documentFileId, which can be required with the matching methods and the vouchers id:
+The required id is not the id itself, it is the documentFileId, which can be required with the matching method and the vouchers id:
 
 ```ts
 renderCreditNoteDocumentFileId(id);
