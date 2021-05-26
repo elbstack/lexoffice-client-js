@@ -310,7 +310,6 @@ retrieveContact(id: string): Promise<Result<ContactRetrieveResponse, RequestErro
 updateContact(id: string, contact: ContactUpdatePerson | ContactUpdateCompany): Promise<Result<ContactUpdateResponse, RequestError>>
 
 filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Result<ContactFilterRetrieveResponse, RequestError>>
-
 ```
 
 ### Country
@@ -323,7 +322,9 @@ retrieveListOfCountries(): Promise<Result<Country[], RequestError>>
 
 ```ts
 createCreditNote(creditNote: CreditNoteCreate, optionalFinalized?: OptionalFinalized): Promise<Result<CreditNoteCreateResponse, RequestError>>
+
 retrieveCreditNote(id: string): Promise<Result<CreditNoteRetrieveResponse, RequestError>>
+
 renderCreditNoteDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
@@ -337,8 +338,11 @@ retrieveDownPaymentInvoice(id: string): Promise<Result<DownPaymentInvoice, Reque
 
 ```ts
 createEventSubscription(eventSubscription: EventSubscriptionCreate): Promise<Result<EventSubscription, RequestError>>
+
 retrieveEventSubscription(id: string): Promise<Result<EventSubscription, RequestError>>
+
 retrieveAllEventSubscriptions(): Promise<Result<EventSubscriptions, RequestError>>
+
 deleteEventSubscription(id: string): Promise<Result<unknown, RequestError>>
 ```
 
@@ -346,6 +350,7 @@ deleteEventSubscription(id: string): Promise<Result<unknown, RequestError>>
 
 ```ts
 uploadFile(data: FormData): Promise<Result<FileResponse, RequestError>>
+
 downloadFile(documentFileId: string, optionalParameter?: RenderType): Promise<Result<unknown, RequestError>>
 ```
 
@@ -353,7 +358,9 @@ downloadFile(documentFileId: string, optionalParameter?: RenderType): Promise<Re
 
 ```ts
 createInvoice(invoice: InvoiceCreate | XRechnung, optionalFinalized?: OptionalFinalized): Promise<Result<InvoiceCreateResponse, RequestError>>
+
 retrieveInvoice(id: string): Promise<Result<InvoiceRetrieveResponse, RequestError>>
+
 renderInvoiceDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
@@ -361,7 +368,9 @@ renderInvoiceDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestE
 
 ```ts
 createOrderConfirmation(orderConfirmation: OrderConfirmation): Promise<Result<OrderConfirmationResponse, RequestError>>
+
 retrieveOrderConfirmation(id: string): Promise<Result<OrderConfirmationRetrieveResponse, RequestError>>
+
 renderOrderConfirmationDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
@@ -393,7 +402,9 @@ retrieveProfile(): Promise<Result<Profile, RequestError>>
 
 ```ts
 createQuotation(quotation: QuotationCreate, optionalFilter?: OptionalFinalized): Promise<Result<QuotationCreate, RequestError>>
+
 retrieveQuotation(id: string): Promise<Result<Partial<Quotation>, RequestError>>
+
 renderQuotationDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
@@ -401,6 +412,7 @@ renderQuotationDocumentFileId(id: string): Promise<Result<DocumentFileId, Reques
 
 ```ts
 retrieveRecurringTemplate(id: string): Promise<Result<Partial<RecurringTemplate>, RequestError>>
+
 retrieveAllRecurringTemplates(optionalFilter?: PagingParameters): Promise<Result<RecurringTemplates, RequestError>>
 ```
 
@@ -408,9 +420,13 @@ retrieveAllRecurringTemplates(optionalFilter?: PagingParameters): Promise<Result
 
 ```ts
 createVoucher(voucher: CreateVoucher): Promise<Result<VoucherCreateResponse, RequestError>>
+
 retrieveVoucher(id: string): Promise<Result<Partial<Voucher>, RequestError>>
+
 updateVoucher(id: string, voucher: CreateVoucher): Promise<Result<VoucherCreateResponse, RequestError>>
+
 filterVoucher(voucherNumber: VoucherNumber): Promise<Result<Partial<Vouchers>, RequestError>>
+
 uploadFileToVoucher(data: FormData, id: string): Promise<Result<FileResponse, RequestError>>
 ```
 
@@ -448,7 +464,7 @@ We offer software development and design as service. That's how we support you w
 
 ### 👩🏻‍💻👨🏽‍💻 We are hiring!
 
-<p>Wir sind keine klassische Software-Agentur, sondern ein selbstorganisiertes Unternehmen mit eigenem Startup-Inkubator. Du kannst selbst entscheiden, wie viel, woran und für wen du arbeiten möchtest. Akquiriere deine eigenen Kunden und Projekte oder setze endlich dein Nebenprojekt in die Tat um – und mache daraus vielleicht sogar ein eigenes Startup.</p>
+<p>We are more than a classic software agency, rather like a highly self organized company with our own start-up incubator. You can choose how much, for whom and what you want to work for. Acquire your own customers and projects, simply make your sideproject become reality or even a proper start-up.</p>
 <p>Sounds like a scam?</p>
 
 <a href="https://www.kununu.com/de/elbstack2">➡️ Go and check kununu.com</a><br>
