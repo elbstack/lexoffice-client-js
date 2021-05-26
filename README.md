@@ -302,9 +302,7 @@ The following list does not contain required arguments.
 ### Contact
 
 ```ts
-createContact(
-    contact: ContactCreatePerson | ContactCreateCompany,
-  ): Promise<Result<ContactCreateResponse, RequestError>>;
+createContact(contact: ContactCreatePerson | ContactCreateCompany): Promise<Result<ContactCreateResponse, RequestError>>;
 filterContact();
 ```
 
