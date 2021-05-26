@@ -35,7 +35,7 @@
     />
   </a>
 
-## </p>
+</p>
 
 ## 📦 Contents
 
@@ -79,6 +79,8 @@ npm install @elbstack/lexoffice-client-js
 
 You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
+<h2 name="usage" >🔑 Usage</h2>
+
 To get your API Key, you must already be a lexoffice user. Get it [here](https://app.lexoffice.de/settings/#/public-api).
 
 ```ts
@@ -89,7 +91,7 @@ const client = new Client(YOUR_LEXOFFICE_API_KEY);
 
 <h2 name="examples">💡 Examples</h2>
 
-All functions should be 'async' as the clients methods return promises. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error handling](#error-handling).
+All functions are promise based. These promises are formatted by the [ts-results package](https://github.com/vultix/ts-results), for extended error handling see [Error handling](#error-handling).
 
 ### Retrieve an invoice
 
@@ -159,7 +161,7 @@ if (createdInvoiceResult.ok) {
 }
 ```
 
-### Upload File ( one option )
+### Upload File
 
 ```ts
 let fs = require('fs');
@@ -210,7 +212,7 @@ if (YOUR_RESULT.ok) {
 ### Error codes and types
 
 <table>
-<th>Regular errors</th>
+<th colspan="4">Regular errors</th>
 <tr>
 <th width="15%">❌ Error code</th>
 <th width="35%"><img src="https://emojis.slackmojis.com/emojis/images/1479745458/1383/typescript.png?1479745458" width="20" height="20"/> Error type</th>
@@ -277,7 +279,7 @@ if (YOUR_RESULT.ok) {
 <td></td>
 <td></td>
 </tr>
-<th>Legacy errors (used by the endpoints files, profiles and contacts)</th>
+<th colspan="4">Legacy errors (used by the endpoints files, profiles and contacts)</th>
 <tr>
 <td>400</td>
 <td>RequestBadRequestLegacyError</td>
@@ -300,7 +302,7 @@ The following list does not contain required arguments.
 ### Contact
 
 ```ts
-updateContact());
+updateContact();
 filterContact();
 ```
 
@@ -433,8 +435,8 @@ methods and the vouchers id.
 
 <h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> This package has been brought to you by elbstack!</h2>
 
-elbstack ist ein Software Engineering & Design-Unternehmen. Wir hinterfragen, wir beraten, und wir freuen uns darauf, eurem nächsten Projekt zum Erfolg zu verhelfen.<br>
-Wir bieten Softwarentwicklung und -design als Dienstleistung an. Damit unterstützen wir euch bei der Umsetzung eurer Projekte - egal ob mit einzelnen Mitarbeitern oder durch ein ganzes Team. Wir arbeiten dabei gerne Remote oder auch bei euch vor Ort.
+elbstack is a software engineering & design company. We question, we advise, and we're excited to help your next project to succeed.<br>
+We offer software development and design as service. That's how we support you with the realisation of your projects - with individual employees or with a whole team. We love to work remotely, but we will work at your place, too.
 
 ### 👩🏻‍💻👨🏽‍💻 We are hiring!
 
