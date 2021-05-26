@@ -297,8 +297,6 @@ RequestMethodNotAcceptableLegacyError</td>
 
 <h2 name="provided-methods">🛠 Provided methods grouped by endpoint</h2>
 
-The following list does not contain required arguments.
-
 ### Contact
 
 ```ts
