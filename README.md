@@ -77,7 +77,7 @@ npm install @elbstack/lexoffice-client-js
 
 <h2 name="documentation">📚 Documentation</h2>
 
-You can find the official <img src="/images/lexoffice_logo_RGB.png" width="80" height="16"/> API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
+You can find the official lexoffice API documentation [here](https://developers.lexoffice.io/docs/#lexoffice-api-documentation).
 
 <h2 name="usage" >🔑 Usage</h2>
 
@@ -302,7 +302,9 @@ The following list does not contain required arguments.
 ### Contact
 
 ```ts
-updateContact();
+createContact(
+    contact: ContactCreatePerson | ContactCreateCompany,
+  ): Promise<Result<ContactCreateResponse, RequestError>>;
 filterContact();
 ```
 
