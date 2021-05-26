@@ -304,9 +304,12 @@ The following list does not contain required arguments.
 ```ts
 
 createContact(contact: ContactCreatePerson | ContactCreateCompany): Promise<Result<ContactCreateResponse, RequestError>>
+
 retrieveContact(id: string): Promise<Result<ContactRetrieveResponse, RequestError>>
+
 updateContact(id: string, contact: ContactUpdatePerson | ContactUpdateCompany): Promise<Result<ContactUpdateResponse, RequestError>>
-filterContact(filter?: OptionalFilters & Partial<PagingParameters>,): Promise<Result<ContactFilterRetrieveResponse, RequestError>>
+
+filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Result<ContactFilterRetrieveResponse, RequestError>>
 
 ```
 
