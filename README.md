@@ -303,7 +303,7 @@ The following list does not contain required arguments.
 
 ```ts
 
-await createContact(contact: ContactCreatePerson | ContactCreateCompany): Promise<Result<ContactCreateResponse, RequestError>> {return};
+createContact(contact: ContactCreatePerson | ContactCreateCompany): Promise<Result<ContactCreateResponse, RequestError>>
 retrieveContact(id: string): Promise<Result<ContactRetrieveResponse, RequestError>>;
 updateContact(id: string,contact: ContactUpdatePerson | ContactUpdateCompany): Promise<Result<ContactUpdateResponse,RequestError>>;
 filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Result<ContactFilterRetrieveResponse, RequestError>>;
@@ -313,15 +313,15 @@ filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Res
 ### Country
 
 ```ts
-retrieveListOfCountries();
+retrieveListOfCountries(): Promise<Result<Country[], RequestError>>
 ```
 
 ### Credit note
 
 ```ts
-createCreditNote();
-retrieveCreditNote();
-renderCreditNoteDocumentFileId();
+createCreditNote(creditNote: CreditNoteCreate,optionalFinalized?: OptionalFinalized): Promise<Result<CreditNoteCreateResponse, RequestError>>;
+retrieveCreditNote(id: string): Promise<Result<CreditNoteRetrieveResponse, RequestError>>;
+renderCreditNoteDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>;
 ```
 
 ### Down payment invoice
@@ -432,7 +432,7 @@ Only possible for any type of vouchers that are not in "draft" mode.
 The required id is not the id itself, it is the documentFileId, which can be required with the matching
 
 ```ts
-renderXXXDocumentFileId(id);
+renderCreditNoteDocumentFileId(id);
 ```
 
 methods and the vouchers id.
