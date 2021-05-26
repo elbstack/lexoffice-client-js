@@ -304,9 +304,9 @@ The following list does not contain required arguments.
 ```ts
 
 createContact(contact: ContactCreatePerson | ContactCreateCompany): Promise<Result<ContactCreateResponse, RequestError>>
-retrieveContact(id: string): Promise<Result<ContactRetrieveResponse, RequestError>>;
-updateContact(id: string,contact: ContactUpdatePerson | ContactUpdateCompany): Promise<Result<ContactUpdateResponse,RequestError>>;
-filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Result<ContactFilterRetrieveResponse, RequestError>>;
+retrieveContact(id: string): Promise<Result<ContactRetrieveResponse, RequestError>>
+updateContact(id: string, contact: ContactUpdatePerson | ContactUpdateCompany): Promise<Result<ContactUpdateResponse, RequestError>>
+filterContact(filter?: OptionalFilters & Partial<PagingParameters>): Promise<Result<ContactFilterRetrieveResponse, RequestError>>
 
 ```
 
@@ -319,47 +319,47 @@ retrieveListOfCountries(): Promise<Result<Country[], RequestError>>
 ### Credit note
 
 ```ts
-createCreditNote(creditNote: CreditNoteCreate,optionalFinalized?: OptionalFinalized): Promise<Result<CreditNoteCreateResponse, RequestError>>;
-retrieveCreditNote(id: string): Promise<Result<CreditNoteRetrieveResponse, RequestError>>;
-renderCreditNoteDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>;
+createCreditNote(creditNote: CreditNoteCreate, optionalFinalized?: OptionalFinalized): Promise<Result<CreditNoteCreateResponse, RequestError>>
+retrieveCreditNote(id: string): Promise<Result<CreditNoteRetrieveResponse, RequestError>>
+renderCreditNoteDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
 ### Down payment invoice
 
 ```ts
-retrieveDownPaymentInvoice();
+retrieveDownPaymentInvoice(id: string): Promise<Result<DownPaymentInvoice, RequestError>>
 ```
 
 ### Event subscription
 
 ```ts
-createEventSubscription();
-retrieveEventSubscription();
-retrieveAllEventSubscriptions();
-deleteEventSubscription();
+createEventSubscription(eventSubscription: EventSubscriptionCreate): Promise<Result<EventSubscription, RequestError>>
+retrieveEventSubscription(id: string): Promise<Result<EventSubscription, RequestError>>
+retrieveAllEventSubscriptions(): Promise<Result<EventSubscriptions, RequestError>>
+deleteEventSubscription(id: string): Promise<Result<unknown, RequestError>>
 ```
 
 ### File
 
 ```ts
-uploadFile();
-downloadFile();
+uploadFile(data: FormData): Promise<Result<FileResponse, RequestError>>
+downloadFile(documentFileId: string, optionalParameter?: RenderType): Promise<Result<unknown, RequestError>>
 ```
 
 ### Invoice
 
 ```ts
-createInvoice();
-retrieveInvoice();
-renderInvoiceDocumentFileId();
+createInvoice(invoice: InvoiceCreate | XRechnung, optionalFinalized?: OptionalFinalized): Promise<Result<InvoiceCreateResponse, RequestError>>
+retrieveInvoice(id: string): Promise<Result<InvoiceRetrieveResponse, RequestError>>
+renderInvoiceDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
 ### Order confirmation
 
 ```ts
-createOrderConfirmation();
-retrieveOrderConfirmation();
-renderOrderConfirmationDocumentFileId();
+createOrderConfirmation(orderConfirmation: OrderConfirmation): Promise<Result<OrderConfirmationResponse, RequestError>>
+retrieveOrderConfirmation(id: string): Promise<Result<OrderConfirmationRetrieveResponse, RequestError>>
+renderOrderConfirmationDocumentFileId(id: string): Promise<Result<DocumentFileId, RequestError>>
 ```
 
 ### Payment
@@ -429,13 +429,13 @@ Only possible for any type of vouchers that are not in "draft" mode.
 
 ### Download File
 
-The required id is not the id itself, it is the documentFileId, which can be required with the matching
+The required id is not the id itself, it is the documentFileId, which can be required with the matching methods and the vouchers id:
 
 ```ts
 renderCreditNoteDocumentFileId(id);
+renderInvoiceDocumentFileId(id);
+renderOrderConfirmationDocumentFileId(id);
 ```
-
-methods and the vouchers id.
 
 <h2 name="about"><img src="images/favicon-32x32.png" width="30" height="30"/> This package has been brought to you by elbstack!</h2>
 
