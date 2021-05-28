@@ -1,6 +1,6 @@
 {
   "name": "@elbstack/lexoffice-client-js",
-  "version": "0.1.0",
+  "version": "1.0.0-0",
   "description": "An universal client for the Lexoffice API written in Typescript",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
