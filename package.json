@@ -10,6 +10,7 @@
   "scripts": {
     "build": "rm -rf dist && microbundle",
     "dev": "microbundle watch",
+    "release": "npm run build && np",
     "lint": "eslint 'src/**/*.ts' --fix",
     "test": "echo \"No test specified\"",
     "start:example": "ts-node example/index.ts"
