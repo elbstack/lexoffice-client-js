@@ -16,10 +16,10 @@
     <img src="https://badgen.net/github/stars/elbstack/lexoffice-client-js" alt="GitHub Stars"/>
   </a>
     <a>
-    <img alt="npm (latest)" src="https://img.shields.io/npm/v/elbstack/latest"/>
+    <img alt="npm (latest)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/latest"/>
   </a>
   <a>
-    <img alt="npm (develop)" src="https://img.shields.io/npm/v/elbstack/develop?color=%23e044aa"/>
+    <img alt="npm (next)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/next?color=%23e044aa"/>
   </a>
     <br>
   <a href="https://github.com/badges/shields/pulse" >
