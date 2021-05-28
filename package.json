@@ -7,10 +7,6 @@
   "umd:main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "build": "rm -rf dist && microbundle",
     "dev": "microbundle watch",
@@ -31,6 +27,10 @@
     "node",
     "browser"
   ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": "elbstack <hello@elbstack.com>",
   "contributors": [
     "Annaelle Rössert <annaelle@elbstack.com>"
@@ -40,6 +40,9 @@
     "url": "https://github.com/elbstack/lexoffice-client-js/issues"
   },
   "homepage": "https://github.com/elbstack/lexoffice-client-js#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
