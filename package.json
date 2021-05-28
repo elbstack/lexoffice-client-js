@@ -15,7 +15,7 @@
     "build": "rm -rf dist && microbundle",
     "dev": "microbundle watch",
     "lint": "eslint 'src/**/*.ts' --fix",
-    "test": "jest",
+    "test": "echo \"No test specified\"",
     "start:example": "ts-node example/index.ts"
   },
   "repository": {
