@@ -1,0 +1,66 @@
+{
+  "name": "@elbstack/lexoffice-client-js",
+  "version": "0.1.0",
+  "description": "An universal client for the Lexoffice API written in Typescript",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "umd:main": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && microbundle",
+    "dev": "microbundle watch",
+    "lint": "eslint 'src/**/*.ts' --fix",
+    "test": "jest",
+    "start:example": "ts-node example/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elbstack/lexoffice-client-js.git"
+  },
+  "keywords": [
+    "lexoffice",
+    "api",
+    "client",
+    "javascript",
+    "typescript",
+    "node",
+    "browser"
+  ],
+  "author": "elbstack <hello@elbstack.com>",
+  "contributors": [
+    "Annaelle Rössert <annaelle@elbstack.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elbstack/lexoffice-client-js/issues"
+  },
+  "homepage": "https://github.com/elbstack/lexoffice-client-js#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "local-package-publisher": "^1.0.4",
+    "microbundle": "^0.13.1",
+    "nock": "^13.0.7",
+    "np": "^7.5.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0",
+    "ts-results": "^3.1.1",
+    "uri-tag": "^1.3.0",
+    "utility-types": "^3.10.0"
+  }
+}
