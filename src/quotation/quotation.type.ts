@@ -27,7 +27,7 @@ export type Quotation = {
   version: number;
   language: string;
   archived: boolean;
-  voucherStatus: string;
+  voucherStatus: 'draft' | 'open' | 'accepted' | 'rejected';
   voucherNumber: string;
   voucherDate: string;
   address: Address | AddressExistingLexofficeContact | AddressNonExistingLexofficeContact;

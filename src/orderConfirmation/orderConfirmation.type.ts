@@ -11,5 +11,6 @@ export type OrderConfirmation = InvoiceCreate & {
 export type OrderConfirmationResponse = InvoiceCreateResponse;
 
 export type OrderConfirmationRetrieveResponse = InvoiceRetrieveResponse & {
+  voucherStatus: 'draft'
   deliveryTerms?: string;
 };

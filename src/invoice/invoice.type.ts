@@ -8,7 +8,7 @@ export type Invoice = {
   version: number;
   language: string;
   archived: boolean;
-  voucherStatus: string;
+  voucherStatus: 'draft' | 'open' | 'paid' | 'voided';
   voucherNumber: string;
   voucherDate: string;
   dueDate: string | null;
@@ -92,7 +92,7 @@ export type LineItem = {
   unitPrice: UnitPrice | UnitPriceGross;
   discountPercentage?: number;
   lineItemAmount: number;
-  
+
 };
 
 export type CustomLineItem = Omit<LineItem, 'lineItemAmount' | 'id'>;
@@ -101,7 +101,7 @@ export type TextLineItem = {
   type: string;
   name: string;
   description: string;
-  
+
 };
 
 export type UnitPrice = {

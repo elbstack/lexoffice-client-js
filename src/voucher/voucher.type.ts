@@ -4,8 +4,8 @@ import { InvoiceCreateResponse } from '..';
 export type Voucher = {
   id: string;
   organizationId: string;
-  type: string;
-  voucherStatus: string;
+  type: 'saleinvoice' | 'salecreditnote' | 'purchaseinvoice' | 'purchasecreditnote';
+  voucherStatus: 'open' | 'paid' | 'paidoff' | 'voided' | 'transferred' | 'sepadebit';
   voucherNumber: string;
   voucherDate: string;
   shippingDate: string;

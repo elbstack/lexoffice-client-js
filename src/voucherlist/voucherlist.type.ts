@@ -1,8 +1,8 @@
 export type Voucherlist = {
   content: {
     id: string;
-    voucherType: string;
-    voucherStatus: string;
+    voucherType: 'salesinvoice' | 'salescreditnote' | 'purchaseinvoice' | 'purchasecreditnote' | 'invoice' | 'downpaymentinvoice' | 'creditnote' | 'orderconfirmation' | 'quotation';
+    voucherStatus: 'draft' | 'open' | 'paid' | 'paidoff' | 'voided' | 'transferred' | 'sepadebit' | 'overdue' | 'accepted' | 'rejected';
     voucherNumber: string;
     voucherDate: string;
     updatedDate: string;
