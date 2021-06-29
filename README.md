@@ -22,7 +22,7 @@
     <img alt="npm (next)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/next?color=%23e044aa"/>
   </a>
     <br>
-  <a href="https://github.com/badges/shields/pulse" >
+  <a href="https://github.com/elbstack/lexoffice-client-js/graphs/commit-activity" >
     <img src="https://img.shields.io/github/commit-activity/m/elbstack/lexoffice-client-js" alt="Activity" />        
   </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/graphs/contributors">
