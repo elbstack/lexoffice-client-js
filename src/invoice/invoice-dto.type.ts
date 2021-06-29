@@ -32,7 +32,6 @@ export type InvoiceCreateResponse = {
 };
 // Response from retrieving an invoice by id
 export type InvoiceRetrieveResponse = Partial<Invoice>;
-// Responce from rendering DocumentFileId
-export type DocumentFileId = Required<Partial<Invoice>, 'files'>;
-// export type DocumentFileId = {documentFileId:string;}
+// Response from rendering DocumentFileId
+export type DocumentFileId = {documentFileId:string;}
 ////////////////////////////////////////
