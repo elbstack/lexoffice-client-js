@@ -10,23 +10,23 @@
 <br>
 <p align="center">
   <a href="https://github.com/elbstack/lexoffice-client-js">
-    <img src="https://badgen.net/badge/-/github?icon=github&label" alt="GitHub" />
+    <img src="https://badgen.net/badge/-/github?icon=github&label&color=%23ebdb34" alt="GitHub" />
   </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/stargazers">
-    <img src="https://badgen.net/github/stars/elbstack/lexoffice-client-js" alt="GitHub Stars"/>
+    <img src="https://badgen.net/github/stars/elbstack/lexoffice-client-js?color=%23ed9e37" alt="GitHub Stars"/>
   </a>
     <a>
-    <img alt="npm (latest)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/latest"/>
+    <img alt="npm (latest)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/latest?color=%23f73149"/>
   </a>
   <a>
     <img alt="npm (next)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/next?color=%23e044aa"/>
   </a>
     <br>
   <a href="https://github.com/elbstack/lexoffice-client-js/pulse" >
-    <img src="https://img.shields.io/github/commit-activity/m/elbstack/lexoffice-client-js" alt="Activity" />        
+    <img src="https://img.shields.io/github/commit-activity/m/elbstack/lexoffice-client-js?color=%23329121" alt="Activity" />        
   </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/elbstack/lexoffice-client-js" alt="Contributors" />
+    <img src="https://img.shields.io/github/contributors/elbstack/lexoffice-client-js?color=%2345e6db" alt="Contributors" />
   </a>
   <a href="https://github.com/elbstack/lexoffice-client-js/blob/main/LICENSE">
     <img
@@ -34,7 +34,9 @@
       alt="MIT license"
     />
   </a>
-
+  <a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AnnaelleRoessert/elbstack/lexoffice-client-js?logoColor=green">
+</a>
 </p>
 
 ## 📦 Contents
