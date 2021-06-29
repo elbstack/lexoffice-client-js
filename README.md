@@ -158,7 +158,7 @@ const invoice = {
   remark: 'Vielen Dank für Ihren Einkauf',
 };
 
-const createdInvoiceResult = await client.createInvoice(invoice, { finalized: true });
+const createdInvoiceResult = await client.createInvoice(invoice, { finalize: true });
 
 if (createdInvoiceResult.ok) {
   const invoice = createdInvoiceResult.val;

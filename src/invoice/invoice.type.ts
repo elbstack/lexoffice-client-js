@@ -157,5 +157,5 @@ export type ShippingConditionsNone = Required<Partial<ShippingConditions>, 'ship
 export type TaxRatePercentage = number;
 
 export type OptionalFinalized = {
-  finalized?: boolean;
+  finalize?: boolean;
 };
