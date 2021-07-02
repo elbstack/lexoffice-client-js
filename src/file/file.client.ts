@@ -30,6 +30,7 @@ export class FileClient extends BaseClient {
           Accept: '*/*',
         },
         params: optionalParameter,
+        responseType: 'arraybuffer',
       })
       .then((result) => Ok(result.data))
       .catch((error) => {

@@ -34,9 +34,6 @@
       alt="MIT license"
     />
   </a>
-  <a>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AnnaelleRoessert/elbstack/lexoffice-client-js?logoColor=green">
-</a>
 </p>
 
 ## 📦 Contents
