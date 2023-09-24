@@ -142,6 +142,6 @@ export type OptionalFilters = {
   vendor?: boolean;
 };
 
-export type ContactFilterRetrieveResponse = {
-  content: Partial<ContactFull>[] & Partial<PagingOfRessources>;
+export type ContactFilterRetrieveResponse = Partial<PagingOfRessources> & {
+  content: Partial<ContactFull>[];
 };

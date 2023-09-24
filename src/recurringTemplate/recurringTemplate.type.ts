@@ -30,8 +30,8 @@ export type PagingParameters = {
   sort?: string;
 };
 
-export type RecurringTemplates = {
-  content: Partial<RecurringTemplate[]> & Partial<PagingOfRessources>;
+export type RecurringTemplates = Partial<PagingOfRessources> & {
+  content: Partial<RecurringTemplate[]>;
 };
 
 export type PagingOfRessources = {
